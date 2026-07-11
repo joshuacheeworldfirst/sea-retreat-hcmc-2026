@@ -58,10 +58,13 @@
   .fact .k{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.82); font-weight:700}
   .fact .v{font-size:18px; font-weight:700; margin-top:2px; color:#fff}
   .fact .s{font-size:13px; color:rgba(255,255,255,.88); font-weight:400}
-  .count{display:flex; gap:10px; margin-top:20px}
-  .count .box{background:rgba(0,0,0,.20); border:1px solid rgba(255,255,255,.22); border-radius:12px; padding:8px 14px; text-align:center; min-width:60px}
-  .count .n{font-size:23px; font-weight:800; line-height:1}
+  .cd-wrap{margin-top:22px}
+  .count-label{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#FFD7E4; font-weight:700; margin:0 0 9px}
+  .count{display:flex; gap:10px; flex-wrap:wrap}
+  .count .box{background:rgba(0,0,0,.20); border:1px solid rgba(255,255,255,.22); border-radius:12px; padding:8px 14px; text-align:center; min-width:58px}
+  .count .n{font-size:23px; font-weight:800; line-height:1; font-variant-numeric:tabular-nums}
   .count .l{font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:#FCE4EC; margin-top:4px; font-weight:600}
+  .count-msg{display:inline-block; font-size:17px; font-weight:700; color:#fff; background:linear-gradient(140deg,var(--wfred),var(--wfred-d)); padding:12px 18px; border-radius:12px; box-shadow:0 12px 26px rgba(255,0,81,.30)}
 
   section{padding:54px 0}
   section.alt{background:var(--bg-alt)}
@@ -125,10 +128,14 @@
       <h1 id="h-title"></h1>
       <p class="lede" id="h-lede"></p>
       <div class="facts" id="h-facts"></div>
-      <div class="count" id="countdown" aria-label="Countdown to retreat">
-        <div class="box"><div class="n" id="cd-d">–</div><div class="l">Days</div></div>
-        <div class="box"><div class="n" id="cd-h">–</div><div class="l">Hrs</div></div>
-        <div class="box"><div class="n" id="cd-m">–</div><div class="l">Min</div></div>
+      <div class="cd-wrap">
+        <div class="count-label" id="cd-label">Until we land in Saigon ✈️</div>
+        <div class="count" id="countdown" aria-label="Countdown to retreat">
+          <div class="box"><div class="n" id="cd-d">–</div><div class="l">Days</div></div>
+          <div class="box"><div class="n" id="cd-h">–</div><div class="l">Hrs</div></div>
+          <div class="box"><div class="n" id="cd-m">–</div><div class="l">Min</div></div>
+          <div class="box"><div class="n" id="cd-s">–</div><div class="l">Sec</div></div>
+        </div>
       </div>
     </div>
     <div class="hero-kv" id="hero-kv">
@@ -237,13 +244,23 @@
   document.getElementById('foot-src').textContent = R.syncedFrom;
 
   var t = Date.UTC.apply(null, m.arrivalUTC);
+  var cd = document.getElementById('countdown');
+  var lbl = document.getElementById('cd-label');
+  var timer, pad = function(n){ return (n < 10 ? '0' : '') + n; };
   function tick(){
-    var diff = Math.max(0, t - Date.now());
+    var diff = t - Date.now();
+    if(diff <= 0){
+      if(timer) clearInterval(timer);
+      if(lbl) lbl.style.display = 'none';
+      cd.innerHTML = '<div class="count-msg">It’s here — see you in Saigon! 🎉</div>';
+      return;
+    }
     document.getElementById('cd-d').textContent = Math.floor(diff/86400000);
-    document.getElementById('cd-h').textContent = Math.floor(diff%86400000/3600000);
-    document.getElementById('cd-m').textContent = Math.floor(diff%3600000/60000);
+    document.getElementById('cd-h').textContent = pad(Math.floor(diff%86400000/3600000));
+    document.getElementById('cd-m').textContent = pad(Math.floor(diff%3600000/60000));
+    document.getElementById('cd-s').textContent = pad(Math.floor(diff%60000/1000));
   }
-  tick(); setInterval(tick, 30000);
+  tick(); timer = setInterval(tick, 1000);
 })();
 </script>
 </body>
