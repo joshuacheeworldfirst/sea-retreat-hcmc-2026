@@ -4,7 +4,7 @@
    To update the landing page, edit THIS file only.
    The page (index.html) renders itself from the object below.
    Source of truth: the team planning sheet on alidocs (DingTalk).
-   Last synced from alidocs: 2026-07-11
+   Last synced from alidocs: 2026-07-11 (Joshua Chee flights + extending updated)
    ============================================================ */
 window.RETREAT = {
   meta: {
@@ -81,7 +81,7 @@ window.RETREAT = {
     { n: 3,  name: "Kah Wei",          room: "single", diet: "",             notes: "" },
     { n: 4,  name: "Edmond Mamatlalo", room: "single", diet: "",             notes: "Extending to Sun" },
     { n: 5,  name: "Wei Xuan",         room: "tbc",    diet: "",             notes: "Room pending confirm" },
-    { n: 6,  name: "Joshua Chee",      room: "single", diet: "",             notes: "Room pending confirm" },
+    { n: 6,  name: "Joshua Chee",      room: "single", diet: "",             notes: "Not extending" },
     { n: 7,  name: "Lyn Su",           room: "double", diet: "",             notes: "Sharing w/ Pamela · Extending to Sun" },
     { n: 8,  name: "Pamela Ho",        room: "double", diet: "",             notes: "Sharing w/ Lyn" },
     { n: 9,  name: "Grace Teh",        room: "single", diet: "No beef",      notes: "Extending to Sun" },
@@ -92,13 +92,13 @@ window.RETREAT = {
     { n: 14, name: "Justin Yeo",       room: "double", diet: "",             notes: "Sharing w/ Dat" },
     { n: 15, name: "Dat",              room: "double", diet: "",             notes: "Sharing w/ Justin" }
   ],
-  roomsNote: "🛏️ Rooms held: 15 Aug — 3 single + 2 double · 16 Aug — 3 single + 1 double · 18 Aug — 1 single · Total ~10 rooms (pending Wei Xuan & Joshua to confirm)",
+  roomsNote: "🛏️ Rooms held: 15 Aug — 3 single + 2 double · 16 Aug — 3 single + 1 double · 18 Aug — 1 single · Total ~10 rooms (pending Wei Xuan to confirm)",
 
   flights: [
     { name: "Shawn Shen",       arrive: "13 Aug · 14:35", flightIn: "SQ 184", depart: "16 Aug · 19:40", flightOut: "SQ 185" },
     { name: "Kah Wei",          arrive: "13 Aug · 14:35", flightIn: "SQ 184", depart: "15 Aug · 19:40", flightOut: "SQ 185" },
     { name: "Edmond Mamatlalo", arrive: "13 Aug · 14:35", flightIn: "SQ 184", depart: "16 Aug · 19:40", flightOut: "SQ 185" },
-    { name: "Joshua Chee",      arrive: "13 Aug",         flightIn: "—",      depart: "15 Aug",         flightOut: "—" },
+    { name: "Joshua Chee",      arrive: "13 Aug · 14:25", flightIn: "VN 650", depart: "15 Aug · 17:00", flightOut: "VN 657" },
     { name: "Lyn Su",           arrive: "13 Aug · 14:35", flightIn: "SQ 184", depart: "16 Aug · 19:40", flightOut: "SQ 185" },
     { name: "Pamela Ho",        arrive: "13 Aug · 14:35", flightIn: "SQ 184", depart: "16 Aug · 19:40", flightOut: "SQ 185" },
     { name: "Grace Teh",        arrive: "13 Aug · 14:35", flightIn: "SQ 184", depart: "18 Aug · 19:40", flightOut: "SQ 185" },
