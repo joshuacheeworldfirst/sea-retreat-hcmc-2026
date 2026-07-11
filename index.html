@@ -83,7 +83,7 @@
   .day-top .sub{color:var(--muted); font-size:13px}
   .row{display:grid; grid-template-columns:130px 1fr; gap:14px; padding:13px 4px; border-top:1px dashed var(--line)}
   .row:first-of-type{border-top:0}
-  .time{font-weight:700; color:var(--teal-d); font-variant-numeric:tabular-nums}
+  .time{font-weight:700; color:var(--plum); font-variant-numeric:tabular-nums}
   .act .t{font-weight:600}
   .act .place{font-size:14px; color:var(--muted); margin-top:2px; font-weight:400}
   .act .place a{color:var(--wfred); text-decoration:none; font-weight:600}
@@ -115,7 +115,8 @@
 
   .callout{background:linear-gradient(120deg, rgba(255,0,81,.08), rgba(255,128,0,.08)); border:1px solid var(--line); border-left:4px solid var(--wfred); border-radius:14px; padding:18px 20px; font-size:14px}
   .callout b{color:var(--plum)}
-  footer{padding:42px 0 60px; color:var(--muted); font-size:13px; text-align:center}
+  footer{padding:40px 20px 56px; color:var(--muted); font-size:13px; text-align:center; border-top:1px solid var(--line)}
+  .foot-logo{height:46px; width:auto; max-width:86%; margin:0 auto 18px; display:block}
   footer .src{margin-top:6px}
 </style>
 </head>
@@ -181,6 +182,7 @@
 </main>
 
 <footer>
+  <img class="foot-logo" src="assets/logo-aiwf.png" alt="Ant International | WorldFirst" />
   <div id="foot-line"></div>
   <div class="src" id="foot-src"></div>
 </footer>
