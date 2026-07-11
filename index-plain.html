@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="color-scheme" content="light" />
+<title>WorldFirst SEA Retreat · Ho Chi Minh City · 13–15 Aug 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ===== WorldFirst brand palette (Global Brand Guide, 29 May 2025) ===== */
+  :root{
+    --wfred:#FF0051; --wfred-d:#D80045;   /* flagship — #HeroTheWFRed */
+    --magenta:#BC0050;                     /* core */
+    --plum:#7D0042;                        /* darkest core — secondary */
+    --orange:#FF8000;                      /* core accent (gradient belt) */
+    --ink:#1F2323; --ink-soft:#3A3F42;
+    --bg:#FFFFFF; --bg-alt:#F8F8FB; --card:#FFFFFF;
+    --line:#ECEDEE; --muted:#6F6F6F;
+    --shadow:0 12px 34px rgba(125,0,66,.10);
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth; color-scheme:light}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1060px; margin:0 auto; padding:0 20px}
+  .eyebrow{text-transform:uppercase; letter-spacing:.18em; font-size:12px; font-weight:700; color:var(--wfred)}
+
+  /* HERO — Reverse on WF Red (secondary brand application) */
+  .hero{
+    position:relative; overflow:hidden; color:#fff;
+    background:
+      linear-gradient(90deg, rgba(16,3,11,.66) 0%, rgba(16,3,11,.26) 46%, rgba(16,3,11,0) 72%),
+      url("assets/kv-bg-plain.jpg") center center / cover no-repeat;
+  }
+  .hero .wrap{padding:40px 20px 44px}
+  .hero-grid{display:flex; flex-wrap:wrap; gap:38px; align-items:center}
+  .hero-left{flex:1 1 470px; min-width:0}
+  .hero-kv{flex:1 1 400px; min-width:0}
+  .hero-kv figure{margin:0}
+  .hero-kv img{width:100%; aspect-ratio:3/2; object-fit:cover; object-position:center 40%; border-radius:20px; border:1px solid rgba(255,255,255,.28); box-shadow:0 24px 60px rgba(0,0,0,.42)}
+  .hero-kv figcaption{margin-top:12px; font-size:13px; color:#FCE4EC; text-align:center; font-weight:500}
+  .hero .eyebrow{color:#FFE1EC}
+  .hero h1{font-size:clamp(30px,4.6vw,50px); line-height:1.04; margin:.18em 0 .14em; letter-spacing:-.02em; font-weight:800}
+  .hero h1 .accent{color:#fff; -webkit-text-fill-color:#fff; position:relative}
+  .hero h1 .accent::after{content:""; display:block; height:6px; width:132px; margin-top:10px; border-radius:99px;
+    background:linear-gradient(90deg,#fff,var(--orange)); opacity:.95}
+  .hero p.lede{font-size:clamp(16px,2.2vw,20px); color:#FFE7EF; max-width:46ch; margin:.35em 0 0; font-weight:400}
+  .facts{display:flex; flex-wrap:wrap; gap:12px; margin-top:22px}
+  .fact{background:linear-gradient(140deg,var(--wfred),var(--wfred-d)); border:1px solid rgba(255,255,255,.30); border-radius:14px; padding:11px 15px; min-width:138px; box-shadow:0 12px 26px rgba(255,0,81,.30)}
+  .fact .k{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.82); font-weight:700}
+  .fact .v{font-size:18px; font-weight:700; margin-top:2px; color:#fff}
+  .fact .s{font-size:13px; color:rgba(255,255,255,.88); font-weight:400}
+  .cd-wrap{margin-top:22px}
+  .count-label{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#FFD7E4; font-weight:700; margin:0 0 9px}
+  .count{display:flex; gap:10px; flex-wrap:wrap}
+  .count .box{background:rgba(0,0,0,.20); border:1px solid rgba(255,255,255,.22); border-radius:12px; padding:8px 14px; text-align:center; min-width:58px}
+  .count .n{font-size:23px; font-weight:800; line-height:1; font-variant-numeric:tabular-nums}
+  .count .l{font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:#FCE4EC; margin-top:4px; font-weight:600}
+  .count-msg{display:inline-block; font-size:17px; font-weight:700; color:#fff; background:linear-gradient(140deg,var(--wfred),var(--wfred-d)); padding:12px 18px; border-radius:12px; box-shadow:0 12px 26px rgba(255,0,81,.30)}
+
+  section{padding:54px 0}
+  section.alt{background:var(--bg-alt)}
+  .sec-h{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:24px}
+  .sec-h h2{font-size:clamp(23px,3.6vw,32px); margin:0; letter-spacing:-.01em; color:var(--wfred); font-weight:700}
+  .sec-h .note{color:var(--muted); font-size:14px}
+
+  .day{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:22px 22px 8px; margin-bottom:20px}
+  .day-top{display:flex; align-items:center; gap:14px; margin-bottom:6px}
+  .daychip{width:56px; height:56px; border-radius:14px; flex:0 0 auto; color:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; font-weight:800; line-height:1}
+  .daychip small{font-size:10px; font-weight:700; letter-spacing:.08em; opacity:.92; margin-top:3px}
+  .d1{background:linear-gradient(135deg,var(--wfred),var(--wfred-d))}
+  .d2{background:linear-gradient(135deg,var(--magenta),var(--plum))}
+  .d3{background:linear-gradient(135deg,var(--orange),#E0490C)}
+  .day-top h3{margin:0; font-size:19px; font-weight:700; color:var(--ink)}
+  .day-top .sub{color:var(--muted); font-size:13px}
+  .row{display:grid; grid-template-columns:130px 1fr; gap:14px; padding:13px 4px; border-top:1px dashed var(--line)}
+  .row:first-of-type{border-top:0}
+  .time{font-weight:700; color:var(--plum); font-variant-numeric:tabular-nums}
+  .act .t{font-weight:600}
+  .act .place{font-size:14px; color:var(--muted); margin-top:2px; font-weight:400}
+  .act .place a{color:var(--wfred); text-decoration:none; font-weight:600}
+  .act .place a:hover{text-decoration:underline}
+  .pill{display:inline-block; font-size:11px; font-weight:700; padding:2px 9px; border-radius:999px; background:rgba(255,128,0,.16); color:#B85900; margin-left:6px}
+
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px}
+  .venue{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px; display:flex; flex-direction:column}
+  .venue .tag{font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--wfred)}
+  .venue h4{margin:6px 0 4px; font-size:17px; font-weight:700}
+  .venue .addr{font-size:13px; color:var(--muted); flex:1; font-weight:400}
+  .maplink{margin-top:12px; display:inline-flex; align-items:center; gap:6px; align-self:flex-start; font-size:13px; font-weight:600; color:#fff; text-decoration:none; background:var(--plum); padding:8px 13px; border-radius:10px; transition:background .15s}
+  .maplink:hover{background:var(--wfred)}
+
+  .tablecard{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden}
+  .scroll{overflow-x:auto}
+  table{border-collapse:collapse; width:100%; min-width:720px; font-size:14px}
+  th,td{padding:12px 14px; text-align:left; border-bottom:1px solid var(--line); white-space:nowrap}
+  thead th{background:rgba(255,0,81,.07); color:var(--plum); font-size:12px; text-transform:uppercase; letter-spacing:.06em; font-weight:700}
+  tbody tr:last-child td{border-bottom:0}
+  tbody tr:hover{background:rgba(255,0,81,.04)}
+  td .name{font-weight:600}
+  .badge{display:inline-block; font-size:11px; font-weight:700; padding:2px 9px; border-radius:999px}
+  .b-single{background:rgba(125,0,66,.12); color:var(--plum)}
+  .b-double{background:rgba(255,0,81,.12); color:var(--wfred-d)}
+  .b-diet{background:rgba(255,128,0,.16); color:#B85900}
+  .b-tbc{background:rgba(111,111,111,.14); color:var(--muted)}
+  .legend{display:flex; gap:16px; flex-wrap:wrap; margin-top:14px; font-size:13px; color:var(--muted)}
+
+  .callout{background:linear-gradient(120deg, rgba(255,0,81,.08), rgba(255,128,0,.08)); border:1px solid var(--line); border-left:4px solid var(--wfred); border-radius:14px; padding:18px 20px; font-size:14px}
+  .callout b{color:var(--plum)}
+  footer{padding:42px 0 60px; color:var(--muted); font-size:13px; text-align:center}
+  footer .src{margin-top:6px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-left">
+      <div class="eyebrow" id="h-org"></div>
+      <h1 id="h-title"></h1>
+      <p class="lede" id="h-lede"></p>
+      <div class="facts" id="h-facts"></div>
+      <div class="cd-wrap">
+        <div class="count-label" id="cd-label">Until we land in Saigon ✈️</div>
+        <div class="count" id="countdown" aria-label="Countdown to retreat">
+          <div class="box"><div class="n" id="cd-d">–</div><div class="l">Days</div></div>
+          <div class="box"><div class="n" id="cd-h">–</div><div class="l">Hrs</div></div>
+          <div class="box"><div class="n" id="cd-m">–</div><div class="l">Min</div></div>
+          <div class="box"><div class="n" id="cd-s">–</div><div class="l">Sec</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-kv" id="hero-kv">
+      <figure>
+        <img id="kv-img" src="assets/team-kv.jpg" alt="WorldFirst SEA team" loading="eager"
+             onerror="document.getElementById('hero-kv').style.display='none'">
+        <figcaption id="kv-cap">The WorldFirst SEA crew 🏁</figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="itinerary"><div class="wrap">
+    <div class="sec-h"><span class="eyebrow">Programme</span><h2>Itinerary at a glance</h2><span class="note">All times local (ICT, UTC+7)</span></div>
+    <div id="days"></div>
+  </div></section>
+
+  <section id="venues" class="alt"><div class="wrap">
+    <div class="sec-h"><span class="eyebrow">Where</span><h2>Venues &amp; addresses</h2><span class="note">All in Bến Thành / District 1</span></div>
+    <div class="grid" id="venue-grid"></div>
+  </div></section>
+
+  <section id="roster"><div class="wrap">
+    <div class="sec-h"><span class="eyebrow">Who</span><h2>Attendees &amp; rooming</h2><span class="note">Room type = occupancy · shared partners noted</span></div>
+    <div class="tablecard"><div class="scroll"><table>
+      <thead><tr><th>#</th><th>Name</th><th>Room</th><th>Dietary</th><th>Notes</th></tr></thead>
+      <tbody id="roster-body"></tbody>
+    </table></div></div>
+    <div class="legend" id="rooms-note"></div>
+  </div></section>
+
+  <section id="flights" class="alt"><div class="wrap">
+    <div class="sec-h"><span class="eyebrow">Getting there</span><h2>Flight details</h2><span class="note">Most on SQ 184 arriving 13 Aug · 2:35 PM</span></div>
+    <div class="tablecard"><div class="scroll"><table>
+      <thead><tr><th>Name</th><th>Arrive (SGN)</th><th>Flight in</th><th>Depart</th><th>Flight out</th></tr></thead>
+      <tbody id="flights-body"></tbody>
+    </table></div></div>
+    <div class="legend" id="flights-note"></div>
+  </div></section>
+
+  <section><div class="wrap"><div class="callout" id="disclaimer"></div></div></section>
+</main>
+
+<footer>
+  <div id="foot-line"></div>
+  <div class="src" id="foot-src"></div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+(function(){
+  var R = window.RETREAT;
+  if(!R){ document.body.insertAdjacentHTML('afterbegin','<p style="padding:20px;color:#c00">data.js failed to load.</p>'); return; }
+  var esc = function(s){ return String(s==null?'':s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
+  var map = function(q){ return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q); };
+
+  var m = R.meta;
+  document.getElementById('h-org').textContent = m.org;
+  document.getElementById('h-title').innerHTML = esc(m.city) + '<br><span class="accent">' + esc(m.title) + '</span>';
+  document.getElementById('h-lede').textContent = m.lede;
+  document.title = 'WorldFirst SEA Retreat · ' + m.city + ' · ' + m.dates;
+  var facts = [
+    ['Dates', m.dates, m.datesSub],
+    ['Destination', m.destination, m.destinationSub],
+    ['Base Hotel', m.hotel, m.hotelSub],
+    ['Group', m.group, m.groupSub]
+  ];
+  document.getElementById('h-facts').innerHTML = facts.map(function(f){
+    return '<div class="fact"><div class="k">'+esc(f[0])+'</div><div class="v">'+esc(f[1])+'</div><div class="s">'+esc(f[2])+'</div></div>';
+  }).join('');
+
+  document.getElementById('days').innerHTML = R.itinerary.map(function(d){
+    var rows = d.items.map(function(it){
+      var place = '';
+      if(it.place){
+        place = '<div class="place">'+esc(it.place)+(it.mapQ ? ' · <a href="'+map(it.mapQ)+'" target="_blank" rel="noopener">Map</a>' : '')+'</div>';
+      }
+      var pill = it.pill ? '<span class="pill">'+esc(it.pill)+'</span>' : '';
+      return '<div class="row"><div class="time">'+esc(it.time)+'</div><div class="act"><div class="t">'+esc(it.act)+pill+'</div>'+place+'</div></div>';
+    }).join('');
+    return '<div class="day"><div class="day-top"><div class="daychip '+esc(d.cls)+'">'+esc(d.day)+'<small>'+esc(d.dow)+'</small></div>'+
+           '<div><h3>'+esc(d.title)+'</h3><div class="sub">'+esc(d.date)+'</div></div></div>'+rows+'</div>';
+  }).join('');
+
+  document.getElementById('venue-grid').innerHTML = R.venues.map(function(v){
+    return '<div class="venue"><div class="tag">'+esc(v.tag)+'</div><h4>'+esc(v.name)+'</h4>'+
+           '<div class="addr">'+esc(v.addr)+'</div>'+
+           '<a class="maplink" href="'+map(v.mapQ)+'" target="_blank" rel="noopener">Open in Maps →</a></div>';
+  }).join('');
+
+  var roomBadge = { single:'<span class="badge b-single">Single</span>', double:'<span class="badge b-double">Double</span>', tbc:'<span class="badge b-tbc">TBC</span>' };
+  document.getElementById('roster-body').innerHTML = R.roster.map(function(p){
+    var diet = p.diet ? '<span class="badge b-diet">'+esc(p.diet)+'</span>' : '—';
+    return '<tr><td>'+esc(p.n)+'</td><td><span class="name">'+esc(p.name)+'</span></td><td>'+(roomBadge[p.room]||esc(p.room))+'</td><td>'+diet+'</td><td>'+(p.notes?esc(p.notes):'—')+'</td></tr>';
+  }).join('');
+  document.getElementById('rooms-note').innerHTML = '<span>'+esc(R.roomsNote)+'</span>';
+
+  document.getElementById('flights-body').innerHTML = R.flights.map(function(f){
+    return '<tr><td class="name">'+esc(f.name)+'</td><td>'+esc(f.arrive)+'</td><td>'+esc(f.flightIn)+'</td><td>'+esc(f.depart)+'</td><td>'+esc(f.flightOut)+'</td></tr>';
+  }).join('');
+  document.getElementById('flights-note').innerHTML = '<span>'+esc(R.flightsNote)+'</span>';
+
+  document.getElementById('disclaimer').innerHTML = '<b>Heads up:</b> ' + esc(R.disclaimer);
+  document.getElementById('foot-line').textContent = m.org + ' · ' + m.city + ' · ' + m.dates;
+  document.getElementById('foot-src').textContent = R.syncedFrom;
+
+  var t = Date.UTC.apply(null, m.arrivalUTC);
+  var cd = document.getElementById('countdown');
+  var lbl = document.getElementById('cd-label');
+  var timer, pad = function(n){ return (n < 10 ? '0' : '') + n; };
+  function tick(){
+    var diff = t - Date.now();
+    if(diff <= 0){
+      if(timer) clearInterval(timer);
+      if(lbl) lbl.style.display = 'none';
+      cd.innerHTML = '<div class="count-msg">It’s here — see you in Saigon! 🎉</div>';
+      return;
+    }
+    document.getElementById('cd-d').textContent = Math.floor(diff/86400000);
+    document.getElementById('cd-h').textContent = pad(Math.floor(diff%86400000/3600000));
+    document.getElementById('cd-m').textContent = pad(Math.floor(diff%3600000/60000));
+    document.getElementById('cd-s').textContent = pad(Math.floor(diff%60000/1000));
+  }
+  tick(); timer = setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>
