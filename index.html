@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>WorldFirst SEA Retreat · Ho Chi Minh City · 13–15 Aug 2026</title>
+<style>
+  :root{
+    --coral:#FF5B49; --coral-d:#E23F2E;
+    --ink:#14213D; --ink-2:#33415C;
+    --gold:#F2A900; --teal:#0E9F8E; --violet:#6C5CE7;
+    --bg:#FFF8F3; --card:#FFFFFF; --line:#F0E4DA;
+    --muted:#7A6E64; --shadow:0 10px 30px rgba(20,33,61,.08);
+    --radius:18px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ink:#EAF0FA; --ink-2:#C3CCDD; --bg:#0E1526; --card:#161F33;
+      --line:#26314A; --muted:#98A2B6; --shadow:0 12px 34px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1060px; margin:0 auto; padding:0 20px}
+  .eyebrow{text-transform:uppercase; letter-spacing:.18em; font-size:12px; font-weight:700; color:var(--coral)}
+
+  /* HERO */
+  .hero{
+    position:relative; overflow:hidden; color:#fff;
+    background:
+      radial-gradient(1200px 500px at 85% -10%, rgba(242,169,0,.55), transparent 60%),
+      radial-gradient(900px 500px at 0% 120%, rgba(14,159,142,.55), transparent 55%),
+      linear-gradient(135deg,#1B2A4A 0%, #23324f 45%, #3A2740 100%);
+  }
+  .hero .wrap{padding:64px 20px 72px}
+  .hero .eyebrow{color:#FFD9A0}
+  .hero h1{font-size:clamp(34px,6vw,62px); line-height:1.02; margin:.28em 0 .18em; letter-spacing:-.02em; font-weight:800}
+  .hero h1 .accent{background:linear-gradient(120deg,var(--coral),var(--gold)); -webkit-background-clip:text; background-clip:text; color:transparent}
+  .hero p.lede{font-size:clamp(16px,2.2vw,20px); color:#DCE4F2; max-width:46ch; margin:.2em 0 0}
+  .facts{display:flex; flex-wrap:wrap; gap:14px; margin-top:34px}
+  .fact{background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.18); border-radius:14px; padding:14px 18px; backdrop-filter:blur(6px); min-width:150px}
+  .fact .k{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#FFD9A0; font-weight:700}
+  .fact .v{font-size:18px; font-weight:700; margin-top:2px}
+  .fact .s{font-size:13px; color:#C7D0E2}
+  .count{display:flex; gap:10px; margin-top:26px}
+  .count .box{background:rgba(0,0,0,.22); border:1px solid rgba(255,255,255,.16); border-radius:12px; padding:10px 14px; text-align:center; min-width:66px}
+  .count .n{font-size:26px; font-weight:800; line-height:1}
+  .count .l{font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:#C7D0E2; margin-top:4px}
+
+  section{padding:52px 0}
+  .sec-h{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:22px}
+  .sec-h h2{font-size:clamp(22px,3.5vw,30px); margin:0; letter-spacing:-.01em}
+  .sec-h .note{color:var(--muted); font-size:14px}
+
+  .day{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:22px 22px 8px; margin-bottom:20px}
+  .day-top{display:flex; align-items:center; gap:14px; margin-bottom:6px}
+  .daychip{width:54px; height:54px; border-radius:14px; flex:0 0 auto; color:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; font-weight:800; line-height:1}
+  .daychip small{font-size:10px; font-weight:700; letter-spacing:.08em; opacity:.9; margin-top:2px}
+  .d1{background:linear-gradient(135deg,var(--coral),var(--coral-d))}
+  .d2{background:linear-gradient(135deg,var(--teal),#0b7d70)}
+  .d3{background:linear-gradient(135deg,var(--violet),#4b3fbf)}
+  .day-top h3{margin:0; font-size:19px}
+  .day-top .sub{color:var(--muted); font-size:13px}
+  .row{display:grid; grid-template-columns:130px 1fr; gap:14px; padding:13px 4px; border-top:1px dashed var(--line)}
+  .row:first-of-type{border-top:0}
+  .time{font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums}
+  .act .t{font-weight:600}
+  .act .place{font-size:14px; color:var(--muted); margin-top:2px}
+  .act .place a{color:var(--teal); text-decoration:none; font-weight:600}
+  .act .place a:hover{text-decoration:underline}
+  .pill{display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; border-radius:999px; background:rgba(242,169,0,.16); color:#9a6b00; margin-left:6px}
+  @media (prefers-color-scheme: dark){.pill{color:#FFD98A}}
+
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px}
+  .venue{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px; display:flex; flex-direction:column}
+  .venue .tag{font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--coral)}
+  .venue h4{margin:6px 0 4px; font-size:17px}
+  .venue .addr{font-size:13px; color:var(--muted); flex:1}
+  .maplink{margin-top:12px; display:inline-flex; align-items:center; gap:6px; align-self:flex-start; font-size:13px; font-weight:700; color:#fff; text-decoration:none; background:var(--ink); padding:8px 12px; border-radius:10px}
+  .maplink:hover{background:var(--coral)}
+
+  .tablecard{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden}
+  .scroll{overflow-x:auto}
+  table{border-collapse:collapse; width:100%; min-width:720px; font-size:14px}
+  th,td{padding:12px 14px; text-align:left; border-bottom:1px solid var(--line); white-space:nowrap}
+  thead th{background:rgba(255,91,73,.08); color:var(--ink); font-size:12px; text-transform:uppercase; letter-spacing:.06em}
+  tbody tr:hover{background:rgba(14,159,142,.05)}
+  td .name{font-weight:700}
+  .badge{display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; border-radius:999px}
+  .b-single{background:rgba(108,92,231,.14); color:#5849c4}
+  .b-double{background:rgba(14,159,142,.16); color:#0b7d70}
+  .b-diet{background:rgba(242,169,0,.18); color:#9a6b00}
+  .b-tbc{background:rgba(122,110,100,.16); color:var(--muted)}
+  @media (prefers-color-scheme: dark){.b-single{color:#b9aefc}.b-double{color:#7ee6d8}.b-diet{color:#FFD98A}}
+  .legend{display:flex; gap:16px; flex-wrap:wrap; margin-top:14px; font-size:13px; color:var(--muted)}
+
+  .callout{background:linear-gradient(120deg, rgba(255,91,73,.10), rgba(242,169,0,.10)); border:1px solid var(--line); border-radius:var(--radius); padding:18px 20px; font-size:14px}
+  .callout b{color:var(--ink)}
+  footer{padding:40px 0 60px; color:var(--muted); font-size:13px; text-align:center}
+  footer .src{margin-top:6px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow" id="h-org"></div>
+    <h1 id="h-title"></h1>
+    <p class="lede" id="h-lede"></p>
+    <div class="facts" id="h-facts"></div>
+    <div class="count" id="countdown" aria-label="Countdown to retreat">
+      <div class="box"><div class="n" id="cd-d">–</div><div class="l">Days</div></div>
+      <div class="box"><div class="n" id="cd-h">–</div><div class="l">Hrs</div></div>
+      <div class="box"><div class="n" id="cd-m">–</div><div class="l">Min</div></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="itinerary">
+    <div class="sec-h"><span class="eyebrow">Programme</span><h2>Itinerary at a glance</h2><span class="note">All times local (ICT, UTC+7)</span></div>
+    <div id="days"></div>
+  </section>
+
+  <section id="venues">
+    <div class="sec-h"><span class="eyebrow">Where</span><h2>Venues &amp; addresses</h2><span class="note">All in Bến Thành / District 1</span></div>
+    <div class="grid" id="venue-grid"></div>
+  </section>
+
+  <section id="roster">
+    <div class="sec-h"><span class="eyebrow">Who</span><h2>Attendees &amp; rooming</h2><span class="note">Room type = occupancy · shared partners noted</span></div>
+    <div class="tablecard"><div class="scroll"><table>
+      <thead><tr><th>#</th><th>Name</th><th>Room</th><th>Dietary</th><th>Notes</th></tr></thead>
+      <tbody id="roster-body"></tbody>
+    </table></div></div>
+    <div class="legend" id="rooms-note"></div>
+  </section>
+
+  <section id="flights">
+    <div class="sec-h"><span class="eyebrow">Getting there</span><h2>Flight details</h2><span class="note">Most on SQ 184 arriving 13 Aug · 2:35 PM</span></div>
+    <div class="tablecard"><div class="scroll"><table>
+      <thead><tr><th>Name</th><th>Arrive (SGN)</th><th>Flight in</th><th>Depart</th><th>Flight out</th></tr></thead>
+      <tbody id="flights-body"></tbody>
+    </table></div></div>
+    <div class="legend" id="flights-note"></div>
+  </section>
+
+  <section><div class="callout" id="disclaimer"></div></section>
+</main>
+
+<footer>
+  <div id="foot-line"></div>
+  <div class="src" id="foot-src"></div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+(function(){
+  var R = window.RETREAT;
+  if(!R){ document.body.insertAdjacentHTML('afterbegin','<p style="padding:20px;color:#c00">data.js failed to load.</p>'); return; }
+  var esc = function(s){ return String(s==null?'':s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
+  var map = function(q){ return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q); };
+
+  // Hero
+  var m = R.meta;
+  document.getElementById('h-org').textContent = m.org;
+  document.getElementById('h-title').innerHTML = esc(m.city) + '<br><span class="accent">' + esc(m.title) + '</span>';
+  document.getElementById('h-lede').textContent = m.lede;
+  document.title = 'WorldFirst SEA Retreat · ' + m.city + ' · ' + m.dates;
+  var facts = [
+    ['Dates', m.dates, m.datesSub],
+    ['Destination', m.destination, m.destinationSub],
+    ['Base Hotel', m.hotel, m.hotelSub],
+    ['Group', m.group, m.groupSub]
+  ];
+  document.getElementById('h-facts').innerHTML = facts.map(function(f){
+    return '<div class="fact"><div class="k">'+esc(f[0])+'</div><div class="v">'+esc(f[1])+'</div><div class="s">'+esc(f[2])+'</div></div>';
+  }).join('');
+
+  // Itinerary
+  document.getElementById('days').innerHTML = R.itinerary.map(function(d){
+    var rows = d.items.map(function(it){
+      var place = '';
+      if(it.place){
+        place = '<div class="place">'+esc(it.place)+(it.mapQ ? ' · <a href="'+map(it.mapQ)+'" target="_blank" rel="noopener">Map</a>' : '')+'</div>';
+      }
+      var pill = it.pill ? '<span class="pill">'+esc(it.pill)+'</span>' : '';
+      return '<div class="row"><div class="time">'+esc(it.time)+'</div><div class="act"><div class="t">'+esc(it.act)+pill+'</div>'+place+'</div></div>';
+    }).join('');
+    return '<div class="day"><div class="day-top"><div class="daychip '+esc(d.cls)+'">'+esc(d.day)+'<small>'+esc(d.dow)+'</small></div>'+
+           '<div><h3>'+esc(d.title)+'</h3><div class="sub">'+esc(d.date)+'</div></div></div>'+rows+'</div>';
+  }).join('');
+
+  // Venues
+  document.getElementById('venue-grid').innerHTML = R.venues.map(function(v){
+    return '<div class="venue"><div class="tag">'+esc(v.tag)+'</div><h4>'+esc(v.name)+'</h4>'+
+           '<div class="addr">'+esc(v.addr)+'</div>'+
+           '<a class="maplink" href="'+map(v.mapQ)+'" target="_blank" rel="noopener">Open in Maps →</a></div>';
+  }).join('');
+
+  // Roster
+  var roomBadge = { single:'<span class="badge b-single">Single</span>', double:'<span class="badge b-double">Double</span>', tbc:'<span class="badge b-tbc">TBC</span>' };
+  document.getElementById('roster-body').innerHTML = R.roster.map(function(p){
+    var diet = p.diet ? '<span class="badge b-diet">'+esc(p.diet)+'</span>' : '—';
+    return '<tr><td>'+esc(p.n)+'</td><td><span class="name">'+esc(p.name)+'</span></td><td>'+(roomBadge[p.room]||esc(p.room))+'</td><td>'+diet+'</td><td>'+(p.notes?esc(p.notes):'—')+'</td></tr>';
+  }).join('');
+  document.getElementById('rooms-note').innerHTML = '<span>'+esc(R.roomsNote)+'</span>';
+
+  // Flights
+  document.getElementById('flights-body').innerHTML = R.flights.map(function(f){
+    return '<tr><td class="name">'+esc(f.name)+'</td><td>'+esc(f.arrive)+'</td><td>'+esc(f.flightIn)+'</td><td>'+esc(f.depart)+'</td><td>'+esc(f.flightOut)+'</td></tr>';
+  }).join('');
+  document.getElementById('flights-note').innerHTML = '<span>'+esc(R.flightsNote)+'</span>';
+
+  // Disclaimer + footer
+  document.getElementById('disclaimer').innerHTML = '<b>Heads up:</b> ' + esc(R.disclaimer);
+  document.getElementById('foot-line').textContent = m.org.replace(' · ',' · ') + ' · ' + m.city + ' · ' + m.dates;
+  document.getElementById('foot-src').textContent = R.syncedFrom;
+
+  // Countdown
+  var t = Date.UTC.apply(null, m.arrivalUTC);
+  function tick(){
+    var diff = Math.max(0, t - Date.now());
+    document.getElementById('cd-d').textContent = Math.floor(diff/86400000);
+    document.getElementById('cd-h').textContent = Math.floor(diff%86400000/3600000);
+    document.getElementById('cd-m').textContent = Math.floor(diff%3600000/60000);
+  }
+  tick(); setInterval(tick, 30000);
+})();
+</script>
+</body>
+</html>
