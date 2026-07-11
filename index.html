@@ -36,11 +36,17 @@
   .hero{
     position:relative; overflow:hidden; color:#fff;
     background:
-      radial-gradient(1100px 520px at 88% -20%, rgba(255,128,0,.55), transparent 58%),
-      radial-gradient(900px 520px at -5% 120%, rgba(125,0,66,.85), transparent 60%),
-      linear-gradient(135deg, var(--wfred) 0%, var(--magenta) 52%, var(--plum) 100%);
+      radial-gradient(1000px 500px at 92% -15%, rgba(255,0,81,.42), transparent 55%),
+      radial-gradient(900px 520px at -8% 120%, rgba(43,8,48,.92), transparent 60%),
+      linear-gradient(135deg, #3E0A34 0%, #5E0B45 48%, #7D0042 100%);
   }
-  .hero .wrap{padding:66px 20px 74px}
+  .hero .wrap{padding:60px 20px 68px}
+  .hero-grid{display:flex; flex-wrap:wrap; gap:44px; align-items:center}
+  .hero-left{flex:1 1 470px; min-width:0}
+  .hero-kv{flex:1 1 400px; min-width:0}
+  .hero-kv figure{margin:0}
+  .hero-kv img{width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:20px; border:1px solid rgba(255,255,255,.28); box-shadow:0 24px 60px rgba(0,0,0,.42)}
+  .hero-kv figcaption{margin-top:12px; font-size:13px; color:#FCE4EC; text-align:center; font-weight:500}
   .hero .eyebrow{color:#FFE1EC}
   .hero h1{font-size:clamp(36px,6.2vw,66px); line-height:1.02; margin:.28em 0 .2em; letter-spacing:-.02em; font-weight:800}
   .hero h1 .accent{color:#fff; -webkit-text-fill-color:#fff; position:relative}
@@ -48,10 +54,10 @@
     background:linear-gradient(90deg,#fff,var(--orange)); opacity:.95}
   .hero p.lede{font-size:clamp(16px,2.2vw,20px); color:#FFE7EF; max-width:46ch; margin:.35em 0 0; font-weight:400}
   .facts{display:flex; flex-wrap:wrap; gap:14px; margin-top:34px}
-  .fact{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.24); border-radius:14px; padding:14px 18px; backdrop-filter:blur(6px); min-width:150px}
-  .fact .k{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#FFD7E4; font-weight:700}
-  .fact .v{font-size:18px; font-weight:700; margin-top:2px}
-  .fact .s{font-size:13px; color:#FCE4EC; font-weight:400}
+  .fact{background:linear-gradient(140deg,var(--wfred),var(--wfred-d)); border:1px solid rgba(255,255,255,.30); border-radius:14px; padding:14px 18px; min-width:150px; box-shadow:0 12px 26px rgba(255,0,81,.30)}
+  .fact .k{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.82); font-weight:700}
+  .fact .v{font-size:18px; font-weight:700; margin-top:2px; color:#fff}
+  .fact .s{font-size:13px; color:rgba(255,255,255,.88); font-weight:400}
   .count{display:flex; gap:10px; margin-top:28px}
   .count .box{background:rgba(0,0,0,.20); border:1px solid rgba(255,255,255,.22); border-radius:12px; padding:10px 16px; text-align:center; min-width:68px}
   .count .n{font-size:27px; font-weight:800; line-height:1}
@@ -113,15 +119,24 @@
 <body>
 
 <header class="hero">
-  <div class="wrap">
-    <div class="eyebrow" id="h-org"></div>
-    <h1 id="h-title"></h1>
-    <p class="lede" id="h-lede"></p>
-    <div class="facts" id="h-facts"></div>
-    <div class="count" id="countdown" aria-label="Countdown to retreat">
-      <div class="box"><div class="n" id="cd-d">–</div><div class="l">Days</div></div>
-      <div class="box"><div class="n" id="cd-h">–</div><div class="l">Hrs</div></div>
-      <div class="box"><div class="n" id="cd-m">–</div><div class="l">Min</div></div>
+  <div class="wrap hero-grid">
+    <div class="hero-left">
+      <div class="eyebrow" id="h-org"></div>
+      <h1 id="h-title"></h1>
+      <p class="lede" id="h-lede"></p>
+      <div class="facts" id="h-facts"></div>
+      <div class="count" id="countdown" aria-label="Countdown to retreat">
+        <div class="box"><div class="n" id="cd-d">–</div><div class="l">Days</div></div>
+        <div class="box"><div class="n" id="cd-h">–</div><div class="l">Hrs</div></div>
+        <div class="box"><div class="n" id="cd-m">–</div><div class="l">Min</div></div>
+      </div>
+    </div>
+    <div class="hero-kv" id="hero-kv">
+      <figure>
+        <img id="kv-img" src="assets/team-kv.jpg" alt="WorldFirst SEA team" loading="eager"
+             onerror="document.getElementById('hero-kv').style.display='none'">
+        <figcaption id="kv-cap">The WorldFirst SEA crew 🏁</figcaption>
+      </figure>
     </div>
   </div>
 </header>
