@@ -81,7 +81,7 @@ window.RETREAT = {
     { n: 3,  name: "Kah Wei",          room: "single", diet: "",             notes: "" },
     { n: 4,  name: "Edmond Mamatlalo", room: "single", diet: "",             notes: "Extending to Sun" },
     { n: 5,  name: "Wei Xuan",         room: "tbc",    diet: "",             notes: "Room pending confirm" },
-    { n: 6,  name: "Joshua Chee",      room: "single", diet: "",             notes: "Not extending" },
+    { n: 6,  name: "Joshua Chee",      room: "single", diet: "",             notes: "" },
     { n: 7,  name: "Lyn Su",           room: "double", diet: "",             notes: "Sharing w/ Pamela · Extending to Sun" },
     { n: 8,  name: "Pamela Ho",        room: "double", diet: "",             notes: "Sharing w/ Lyn" },
     { n: 9,  name: "Grace Teh",        room: "single", diet: "No beef",      notes: "Extending to Sun" },
